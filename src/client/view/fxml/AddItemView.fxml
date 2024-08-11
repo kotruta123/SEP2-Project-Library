@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="client.view.controller.moderator.AddItemViewController" style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+    <children>
+        <Label text="Add New Item" style="-fx-font-size: 24px; -fx-text-fill: #333;" />
+
+        <HBox spacing="10">
+            <Label text="Title:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <TextField fx:id="titleField" promptText="Enter title" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Author:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <TextField fx:id="authorField" promptText="Enter author" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Price:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <TextField fx:id="priceField" promptText="Enter price" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Description:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <TextField fx:id="descriptionField" promptText="Enter description" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Image File:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <Button onAction="#handleChooseImage" text="Choose Image" style="-fx-background-color: #0066cc; -fx-text-fill: white;" />
+        </HBox>
+
+        <TextField fx:id="imageField" editable="false" promptText="No file chosen" style="-fx-pref-width: 300; -fx-background-color: #e0e0e0; -fx-text-fill: #333;" />
+
+        <HBox spacing="10">
+            <Label text="Type:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <ComboBox fx:id="typeComboBox" promptText="Select type" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Genre:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            <ComboBox fx:id="genreComboBox" promptText="Select genre" style="-fx-pref-width: 300;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button onAction="#handleAddItem" text="Add Item" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-pref-width: 100;" />
+            <Button onAction="#handleCancel" text="Cancel" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-pref-width: 100;" />
+        </HBox>
+    </children>
+</VBox>

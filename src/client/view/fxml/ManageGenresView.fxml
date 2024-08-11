@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20; -fx-background-color: #f4f4f4; -fx-alignment: CENTER;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="client.view.controller.moderator.ManageGenresViewController">
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Manage Genres" />
+    <TableView fx:id="genreTableView" prefHeight="200" prefWidth="600" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-width: 1;">
+        <columns>
+            <TableColumn fx:id="genreIdColumn" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="genreId" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="genreNameColumn" text="Genre">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="genreImageColumn" text="Image">
+                <cellValueFactory>
+                    <PropertyValueFactory property="image" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button onAction="#handleAddGenre" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-pref-width: 120;" text="Add Genre" />
+    <Button onAction="#handleViewGenre" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-pref-width: 120;" text="View Genre" />
+    <Button onAction="#handleEditGenre" style="-fx-background-color: #ffc107; -fx-text-fill: white; -fx-pref-width: 120;" text="Edit Genre" />
+    <Button onAction="#handleDeleteGenre" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-pref-width: 120;" text="Delete Genre" />
+    <Button onAction="#handleBack" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-pref-width: 120;" text="Back" />
+</VBox>

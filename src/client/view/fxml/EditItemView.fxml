@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="client.view.controller.moderator.EditItemViewController" spacing="10" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+    <Label text="Edit Item" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+    <Label text="Title" />
+    <TextField fx:id="titleField" promptText="Title" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Label text="Author" />
+    <TextField fx:id="authorField" promptText="Author" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Label text="Price" />
+    <TextField fx:id="priceField" promptText="Price" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Label text="Description" />
+    <TextField fx:id="descriptionField" promptText="Description" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Label text="Image" />
+    <TextField fx:id="imageField" promptText="Image Path" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Button text="Choose Image" onAction="#handleChooseImage" style="-fx-font-size: 14px; -fx-padding: 10px;" />
+    <Label text="Type" />
+    <ComboBox fx:id="typeComboBox" promptText="Type" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Button text="Save" onAction="#handleSave" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+    <Button text="Cancel" onAction="#handleCancel" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-pref-width: 300;" />
+</VBox>

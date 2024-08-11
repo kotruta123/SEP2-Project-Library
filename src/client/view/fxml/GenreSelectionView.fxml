@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="client.view.controller.customer.GenreSelectionViewController" spacing="10" style="-fx-padding: 20; -fx-background-color: #f4f4f4; -fx-alignment: CENTER;">
+    <Label text="Select Genre" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+    <ListView fx:id="genreListView" onMouseClicked="#handleGenreSelected" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-pref-height: 400px; -fx-pref-width: 300px;" />
+    <Button text="Back" onAction="#handleBack" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-pref-width: 120;" />
+</VBox>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20; -fx-background-color: #f4f4f4;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="client.view.controller.customer.CustomerViewController">
+    <ListView fx:id="itemListView" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-pref-height: 400;" />
+    <Button onAction="#handleAddToCart" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-pref-width: 120;" text="Add to Cart" />
+    <Button onAction="#handleCheckout" style="-fx-background-color: #ffc107; -fx-text-fill: white; -fx-pref-width: 120;" text="Checkout" />
+    <Button onAction="#handleLogout" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-pref-width: 120;" text="Logout" />
+</VBox>
