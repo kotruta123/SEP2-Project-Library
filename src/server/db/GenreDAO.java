@@ -13,7 +13,7 @@ public class GenreDAO {
 
     public GenreDAO(Connection connection) {
         this.connection = connection;
-        this.itemDAO = new ItemDAO(connection); // Initialize ItemDAO with the same connection
+        this.itemDAO = new ItemDAO(connection);
     }
 
     public List<Genre> getAllGenres() throws LibraryException {
@@ -59,33 +59,28 @@ public class GenreDAO {
 
     public void deleteGenre(int genreId) throws LibraryException {
         try {
-            // Start a transaction
             connection.setAutoCommit(false);
 
-            // First delete order items related to the items of this genre
             itemDAO.deleteOrderItemsByGenre(genreId);
 
-            // Then delete items related to this genre
             itemDAO.deleteItemsByGenre(genreId);
 
-            // Now delete the genre
             try (PreparedStatement stmt = connection.prepareStatement("DELETE FROM genres WHERE genre_id = ?")) {
                 stmt.setInt(1, genreId);
                 stmt.executeUpdate();
             }
 
-            // Commit the transaction
             connection.commit();
         } catch (SQLException e) {
             try {
-                connection.rollback(); // Rollback transaction in case of error
+                connection.rollback();
             } catch (SQLException rollbackEx) {
                 throw new LibraryException("Error rolling back the transaction: " + rollbackEx.getMessage());
             }
             throw new LibraryException("Error accessing the database: " + e.getMessage());
         } finally {
             try {
-                connection.setAutoCommit(true); // Reset auto-commit mode
+                connection.setAutoCommit(true);
             } catch (SQLException e) {
                 throw new LibraryException("Error resetting auto-commit mode: " + e.getMessage());
             }

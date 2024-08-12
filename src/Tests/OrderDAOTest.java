@@ -55,32 +55,27 @@ public class OrderDAOTest {
         order.setOrderItems(Arrays.asList(new OrderItem(1, order, items.get(0), 10)));
         orderDAO.placeOrder(order);
 
-        // TODO: query the order from the database and verify its properties
     }
 
     @Test
     public void testGetOrdersByUser() throws SQLException, LibraryException {
         User user = userDAO.login("alex", "alex");
         List<Order> orders = orderDAO.getOrdersByUser(user.getUserId());
-        // TODO: verify the result
     }
 
     @Test
     public void testGetOrderItems() throws SQLException, LibraryException {
         List<OrderItem> orderItems = orderDAO.getOrderItems(1);
-        // TODO: verify the result
     }
 
     @Test
     public void testDeleteOrderItemsByOrderId() throws SQLException, LibraryException {
         orderDAO.deleteOrderItemsByOrderId(1);
-        // TODO: attempt to query the order items from the database and verify they do not exist
     }
 
     @Test
     public void testDeleteOrdersByUserId() throws SQLException, LibraryException {
         User user = userDAO.login("alex", "alex");
         orderDAO.deleteOrdersByUserId(user.getUserId());
-        // TODO: attempt to query the orders from the database and verify they do not exist
     }
 }

@@ -19,7 +19,7 @@ public class Main extends Application {
             UserInterface userService = (UserInterface) registry.lookup("UserService");
             GenreInterface genreService = (GenreInterface) registry.lookup("GenreService");
             ItemInterface itemService = (ItemInterface) registry.lookup("ItemService");
-            OrderInterface orderService = (OrderInterface) registry.lookup("OrderService"); // Add this
+            OrderInterface orderService = (OrderInterface) registry.lookup("OrderService");
 
             ClientModel clientModel = new ClientModel(userService, genreService, itemService, orderService);
             NavigationHelper navigationHelper = new NavigationHelper(primaryStage, clientModel);

@@ -10,7 +10,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 public class ItemServiceImpl implements ItemInterface, Serializable {
-    private static final long serialVersionUID = 1L; // Add serialVersionUID
+    private static final long serialVersionUID = 1L;
     private ItemDAO itemDAO;
 
     public ItemServiceImpl(ItemDAO itemDAO) {

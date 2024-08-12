@@ -45,12 +45,9 @@ public class AddItemViewModel {
 
     public void addItem(String title, String author, double price, String description, String imagePath, String type, Genre genre) {
         try {
-            // Copy the selected image to the server's images directory
             File source = new File(imagePath);
             File dest = new File("C:/Users/Alexandru/Desktop/SEP2-Project-Library/others/server_images" + source.getName());
             Files.copy(source.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING);
-
-            // Create the new item with the path to the copied image
             Item newItem = new Item(0, title, author, price, description, dest.getPath(), type, genre);
             clientModel.addItem(newItem);
         } catch (LibraryException | IOException e) {

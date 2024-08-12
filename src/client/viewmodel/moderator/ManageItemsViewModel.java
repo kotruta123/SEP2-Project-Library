@@ -46,7 +46,7 @@ public class ManageItemsViewModel {
 
     public void editItem(Item item, Stage stage) {
         navigationHelper.showEditItemView(item, stage);
-        loadItems(); // Ensure the items are reloaded after editing
+        loadItems();
     }
 
     public void selectItem(Item item) {

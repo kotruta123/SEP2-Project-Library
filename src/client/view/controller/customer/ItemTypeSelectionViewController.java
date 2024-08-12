@@ -30,7 +30,6 @@ public class ItemTypeSelectionViewController {
                 viewModel.itemTypeSelected(selectedItemType, primaryStage);
             } catch (IOException e) {
                 e.printStackTrace();
-                // Show error message to user
             }
         }
     }

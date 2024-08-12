@@ -33,11 +33,9 @@ public class RegisterViewController {
         passwordField.textProperty().bindBidirectional(viewModel.passwordProperty());
         nameField.textProperty().bindBidirectional(viewModel.nameProperty());
 
-        // Initialize the age spinner with a value factory and bind it to the view model
         SpinnerValueFactory<Integer> ageValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(5, 100, 18);
         ageSpinner.setValueFactory(ageValueFactory);
 
-        // Bind the ageSpinner value property to the viewModel's age property using Bindings
         Bindings.bindBidirectional(viewModel.ageProperty().asObject(), ageValueFactory.valueProperty());
     }
 

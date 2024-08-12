@@ -46,7 +46,6 @@ public class CartViewController {
         totalPriceLabel.textProperty().bind(totalPriceProperty);
         updateTotalPrice();
 
-        // Add listener to update the total price when the cart items change
         viewModel.getCartItems().addListener((javafx.collections.ListChangeListener<OrderItem>) c -> updateTotalPrice());
     }
 

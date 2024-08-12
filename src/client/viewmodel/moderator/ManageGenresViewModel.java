@@ -38,7 +38,7 @@ public class ManageGenresViewModel {
 
     public void addGenre(Stage stage) {
         navigationHelper.showAddGenreView(stage);
-        loadGenres(); // Ensure the genres are reloaded after adding a new genre
+        loadGenres();
     }
 
     public void deleteGenre(Genre genre) {
@@ -52,7 +52,7 @@ public class ManageGenresViewModel {
 
     public void editGenre(Genre genre, Stage stage) {
         navigationHelper.showEditGenreView(genre, stage);
-        loadGenres(); // Ensure the genres are reloaded after editing
+        loadGenres();
     }
 
     public void selectGenre(Genre genre) {

@@ -52,7 +52,7 @@ public class ItemDetailViewController {
     private void handleAddToCart() {
         int quantity = quantitySpinner.getValue();
         viewModel.addToCart(quantity);
-        navigationHelper.showCartView(stage); // Ensure cart view is updated
+        navigationHelper.showCartView(stage);
     }
 
     @FXML

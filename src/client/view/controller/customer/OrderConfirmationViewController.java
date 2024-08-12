@@ -13,7 +13,6 @@ public class OrderConfirmationViewController {
 
     @FXML
     private void initialize() {
-        // Initialization logic if needed
     }
 
     @FXML

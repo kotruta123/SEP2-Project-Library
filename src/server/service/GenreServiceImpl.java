@@ -10,7 +10,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 public class GenreServiceImpl implements GenreInterface, Serializable {
-    private static final long serialVersionUID = 1L; // Add a serialVersionUID
+    private static final long serialVersionUID = 1L;
     private GenreDAO genreDAO;
 
     public GenreServiceImpl(GenreDAO genreDAO) {

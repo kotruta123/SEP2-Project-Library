@@ -13,7 +13,7 @@ public class UserDAO {
 
     public UserDAO(Connection connection) {
         this.connection = connection;
-        this.orderDAO = new OrderDAO(connection); // Initialize OrderDAO with the same connection
+        this.orderDAO = new OrderDAO(connection);
     }
 
     public User login(String username, String password) throws LibraryException {

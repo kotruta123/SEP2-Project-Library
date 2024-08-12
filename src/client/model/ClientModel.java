@@ -20,7 +20,7 @@ public class ClientModel {
         this.genreService = genreService;
         this.itemService = itemService;
         this.orderService = orderService;
-        this.cartItems = new ArrayList<>(); // Initialize the cart items list
+        this.cartItems = new ArrayList<>();
     }
 
     public User login(String username, String password) throws RemoteException, LibraryException {

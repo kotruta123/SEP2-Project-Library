@@ -26,23 +26,23 @@ public class LibraryServer {
             GenreDAO genreDAO = new GenreDAO(DatabaseConnection.getConnection());
             UserDAO userDAO = new UserDAO(DatabaseConnection.getConnection());
             ItemDAO itemDAO = new ItemDAO(DatabaseConnection.getConnection());
-            OrderDAO orderDAO = new OrderDAO(DatabaseConnection.getConnection()); // Add this
+            OrderDAO orderDAO = new OrderDAO(DatabaseConnection.getConnection());
 
             GenreServiceImpl genreService = new GenreServiceImpl(genreDAO);
             UserServiceImpl userService = new UserServiceImpl(userDAO);
             ItemServiceImpl itemService = new ItemServiceImpl(itemDAO);
-            OrderServiceImpl orderService = new OrderServiceImpl(orderDAO); // Add this
+            OrderServiceImpl orderService = new OrderServiceImpl(orderDAO);
 
             GenreInterface genreStub = (GenreInterface) UnicastRemoteObject.exportObject(genreService, 0);
             UserInterface userStub = (UserInterface) UnicastRemoteObject.exportObject(userService, 0);
             ItemInterface itemStub = (ItemInterface) UnicastRemoteObject.exportObject(itemService, 0);
-            OrderInterface orderStub = (OrderInterface) UnicastRemoteObject.exportObject(orderService, 0); // Add this
+            OrderInterface orderStub = (OrderInterface) UnicastRemoteObject.exportObject(orderService, 0);
 
             Registry registry = LocateRegistry.createRegistry(1099);
             registry.rebind("GenreService", genreStub);
             registry.rebind("UserService", userStub);
             registry.rebind("ItemService", itemStub);
-            registry.rebind("OrderService", orderStub); // Add this
+            registry.rebind("OrderService", orderStub);
 
             System.out.println("Library server is running...");
         } catch (Exception e) {

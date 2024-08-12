@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 
 public class DatabaseConnection {
     private static final Logger LOGGER = Logger.getLogger(DatabaseConnection.class.getName());
-    private static final String URL = "jdbc:postgresql://localhost:5432/"; // replace with your database name
-    private static final String USER = "postgres"; // replace with your username
-    private static final String PASSWORD = "sasa"; // replace with your password
+    private static final String URL = "jdbc:postgresql://localhost:5432/";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "sasa";
     private static Connection connection;
 
     public static Connection initialize() throws SQLException {
@@ -32,3 +32,6 @@ public class DatabaseConnection {
         return connection;
     }
 }
+
+
+
